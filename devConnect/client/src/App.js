@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import { Navbar } from "./components/layout/Navbar";
 import { Landing } from "./components/layout/Landing";
 import { Login } from "./components/auth/Login";
-import {Signup } from "./components/auth/Signup";
+import Signup  from "./components/auth/Signup";
+import Alert from "./components/layout/Alert";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 // Redux
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path = "/" component= {Landing} />
         <Switch>
         <section className ="container" >
+            <Alert/>
             <Switch>
                 
                 <Route exact path = "/login" component= {Login} />
